@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css" media="all" type="text/css">
+    <link rel="icon" href="" />
+    <title> Cadastro </title>
+</head>
+ 
+<body>
+    <div class="header">
+        <div class="logo">
+            <!--Colocar a logo aqui-->
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1903/1903163.png" class="icon"></a>
+        </div>
+    </div>
+ 
+    <div class="introduction">
+ 
+        <div class="container">
+ 
+            <div class="card">
+                <div class="title">
+                    <h1> Cadastro </h1>
+                </div>
+                <div class="group">
+                    <form>
+                        <div class="group">
+                            <!--O atributo FOR aponta para o id do input-->
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="" id="nome">
+                        </div>
+                        <div class="group">
+                            <label for="autor">Autor:</label>
+                            <input type="text" id="autor">
+                        </div>
+                        <div class="group">
+                            <label for="localizacao">Localização:</label>
+                            <input type="text" id="localizacao">
+                        </div>
+                        <div class="group">
+                            <label for="genero">Gênero:</label>
+                            <select id="genero">
+                                <option value="">--Escolha um Gênero--</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Fantasia">Fantasia</option>
+                                <option value="Não-Ficção">Não-Ficção</option>
+                                <option value="Terror">Terror</option>
+                            </select>
+                        </div>
+                        <div class="group">
+                            <label for="paginas">Páginas:</label>
+                            <input type="text" id="paginas">
+                        </div>
+                        <div class="botão">
+                            <button type="button" class="btn" onclick="cadastrar()">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+ 
+        <hr>
+ 
+        <div class="card_turma">
+            <h2>Escolha um Gênero para filtrar</h2>
+        </div>
+    </div>
+ 
+    <div class="turmas">
+        <ul>
+            <li><a href="#" onclick="listar(this.innerHTML)">Romance</a></li>
+            <li><a href="#" onclick="listar(this.innerHTML)">Fantasia</a></li>
+            <li><a href="#" onclick="listar(this.innerHTML)">Não-Ficção</a></li>
+            <li><a href="#" onclick="listar(this.innerHTML)">Terror</a></li>
+        </ul>
+    </div>
+ 
+    <div class="content">
+        <div id="listarlivros" class="active"></div>
+    </div>
+ 
+    <script src="index.js"></script>
+</body>
+ 
+</html>

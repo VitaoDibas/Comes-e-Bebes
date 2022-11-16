@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="condicao.css" rel="stylesheet" type="text/css">
+
+    <title> Atalanta </title>
+    <div id="pae">
+    Qual a sua idade : <input id="idade" type="number"> <button onclick="aposentar()"> OK </button> <br />
+    </div>   
+    <script type="text/javascript">
+        function aposentar() {
+            var idade = parseInt(document.getElementById("idade").value);
+
+            if(idade >= 65)
+            alert("VOCÊ JA PODE SE APOSENTAR");
+            else
+            alert("AINDA FALTA "+ (65-idade) +" ANO(S) PARA VOCÊ SE APOSENTAR");
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

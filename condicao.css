@@ -1,0 +1,26 @@
+button{
+    justify-content: center;
+    text-align: center;
+    background-color: darkgoldenrod;
+}
+body{
+    background-color: rgb(146, 134, 67);
+}
+input{
+    justify-content: center;
+    text-align: center;
+    width: 100px;     
+    margin-left: auto;    
+    margin-right: auto;
+}
+#pae{
+    width: 960px;
+    height: 600px;
+    background-color: gold;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+
+}

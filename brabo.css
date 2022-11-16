@@ -1,0 +1,92 @@
+body{
+
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    display:grid;
+    justify-content:center;
+    align-items: center;
+    font: size 1.2rem;
+    background-color:rgb(49, 134, 160);
+}
+.form-group{
+    position: relative;
+    width: 20rem;
+
+    &__input{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;SSS
+        height:100%;
+        border: 2px solid $clr-gray300;
+        border-radius: $radius;
+
+    }
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(18, 141, 223);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  .form-group{
+    width: 100%;
+    background-color: #00aeff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    justify-content: center;
+  }
+  .modal-header{
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(0, 69, 90);
+  }
+  .tab-content{
+    border: none;
+    background-color:rgb(49, 134, 160);
+  }
+  .listaralunos{
+    border: none;
+    background-color:rgb(49, 134, 160);
+  }
+  .tab-pane{
+    border: none;
+    background-color:rgb(49, 134, 160);
+  }
+  .modal-dialog{
+    background-color: #00aeff;
+  }
+  .modal-content{
+    background-color: #00aeff;
+  }
+  .modal-body{
+    background-color: #00aeff;
+  }

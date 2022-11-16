@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="brabo.css" rel="stylesheet" type="text/css">
+    <title> prova </title>
+</head>
+<body>
+    <ul class="nav nav-tabs">
+        <li><a href="#saopaulo" onclick="listar(this.innerHTML)"> São Paulo</a></li>
+        <li><a href="#rio" onclick="listar(this.innerHTML)"> Rio de Janeiro</a></li>
+        <li><a href="#vitoria" onclick="listar(this.innerHTML)">Vitória</a></li>
+        <li><a href="#belo" onclick="listar(this.innerHTML)"> Belo Horizonte</a></li>
+            </ul>
+                <div class="tab-content">
+                <div id="listaralunos" class="tab-pane active">
+                </div>
+                </div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1> Nuevo Aluno</h1>
+                            </div>
+                            <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" class="form-control" id="nome">
+                            </div>
+                                <div class="form-group">
+                                 <label for="nome">Casa:</label>
+                                    <select id="casa" class="form-control">
+                                <option value="">--Escolha a casa--</option>
+                                <option value="saopaulo">São Paulo</option>
+                                <option value="rio">Rio de Janeiro</option>
+                                <option value="vitoria">Vitoria</option>
+                                <option value="belo">Belo Horizonte</option>
+                            </select>
+                        </div>
+                            <div class="form-group">
+                            <label for="animal">Animal:</label>
+                            <input type="text" class="form-control" id="animal">
+                        </div>
+                            <div class="form-group">
+                            <label for="local">Local:</label>
+                            <input type="text" class="form-control" id="local">
+                        </div>
+                            <button type="button" class="btn btn-default" onclick="matricular()">Matricular</button>
+                        </form></div></div> </div>
+</body>
+<script>
+    /* …function estudante()…*/
+    /* array com dados inicializados…*/
+    function listar(casa){
+    var i;
+    var divcasa = document.getElementById('listaralunos');
+    var conteudo = "<table class='table'>";
+    conteudo += "<tr><th>Nome</th><th>Animal</th><th>Local</th></tr>";
+    for (i = 0; i< alunos.length; i++){
+    if (alunos[i].casa == casa){
+    conteudo += "<tr><td>"+alunos[i].nome+"</td>";
+    conteudo += "<td>"+alunos[i].animal+"</td>";
+    conteudo += "<td>"+alunos[i].localAtual+"</td></tr>";
+    }
+    }
+    conteudo += "</table>";
+    divcasa.innerHTML = conteudo;
+    }
+    var alunos = [];
+                function estudante(nome, casa, animal, local){
+                this.nome = nome;
+                this.casa = casa;
+                this.animal = animal;
+                this.localAtual = local;
+        }
+        /* …function listar()…*/
+        function matricular(){
+                var e = new estudante(nome.value, casa.value, animal.value, local.value);
+                 alunos.push(e);
+                alert("Novo aluno adicionado!");
+                nome.value = "";
+                casa.value = "";
+                animal.value = "";
+                local.value = "";
+        }
+        function listar(casa){
+            var i;
+            var divcasa = document.getElementById('listaralunos');
+            var conteudo = "<table class='table'>";
+                conteudo += "<tr><th>Nome</th><th>Animal</th><th>Local</th><th>Aparatar</th></tr>";
+        for (i = 0; i< alunos.length; i++){
+            if (alunos[i].casa == casa){
+             conteudo += "<tr><td>"+alunos[i].nome+"</td>";
+             conteudo += "<td>"+alunos[i].animal+"</td>";
+             conteudo += "<td>"+alunos[i].localAtual+"</td>";
+             conteudo += "<td><a href='#' onclick='alunoaparatar("+i+")'>aparatar</a></td></tr>";
+            }
+        }
+        conteudo += "</table>";
+        divcasa.innerHTML = conteudo;
+        }
+        function alunoaparatar(i){
+        var novoLocal = window.prompt("Diga o local para onde deseja ir");
+        alunos[i].aparatar(novoLocal);
+        listar(alunos[i].casa);
+        }
+        J
+        AVASCRIPT
+    </script>
+</html>
